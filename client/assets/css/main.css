@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply flex items-center justify-center gap-3 px-3 py-2 rounded-md font-medium outline-none text-sm;
+  }
+  .btn-primary {
+    @apply bg-primary text-white focus:ring-2 focus:ring-primary focus:ring-offset-2 transition;
+  }
+  .input {
+    @apply border focus:outline-none w-full block  border-gray-300 transition transform-gpu focus:border-primary px-3 py-2 rounded-md focus:ring-1 focus:ring-primary-500;
+  }
+}
+
+.fade-down-enter-active,
+.fade-down-leave-active {
+  transition: all 200ms ease-in-out;
+}
+.fade-down-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-down-leave-to {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+}
